@@ -1,0 +1,36 @@
+html {
+    padding: 100px;
+    background-color: rgb(131, 60, 60);
+}
+
+body {
+    background-color: rgb(118, 173, 110);
+    border: 3px solid lightblue;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.list {  
+
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.completed {
+    color: rgb(124, 119, 119);
+    text-decoration: line-through;
+ }
+
+ .trashcan {
+    color: rgb(184, 38, 38);
+    background: none;
+ }
+
+
