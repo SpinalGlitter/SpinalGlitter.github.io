@@ -1,4 +1,3 @@
-// Js code for Todo app
 // Declare variables
 const taskInput = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addBtn");
@@ -72,7 +71,7 @@ addBtn.addEventListener(
             // update task info display
             taskInfo.innerHTML = completedCount;
     
-            // remove item from array. This part was hard but its nice to have google as a friend
+            // remove item from array. 
             const taskIndex = tasksArray.indexOf(task);
             if (taskIndex > -1) {
                 tasksArray.splice(taskIndex, 1); // remove task from array
