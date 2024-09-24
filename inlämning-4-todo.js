@@ -3,6 +3,7 @@ const taskInput = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addBtn");
 const taskInfo = document.querySelector("#taskInfo");
 const todoList = document.querySelector("#todoList");
+const noInput = document.querySelector(".noInput")
 const tasksArray = [];
 let completedCount = 0;
 
@@ -15,21 +16,19 @@ addBtn.addEventListener(
         
         // condition: ceck input not empty (if-sats)
         if (text.length === 0){
-            alert("You have to write something!");
+            noInput.innerHTML = "You have to write something!"
             return;
         };
+
+        noInput.innerHTML = "";
         
+        //pushing input to array and the task is not completed
         const task = {
             text: text,
             completed: false
         };
         tasksArray.push(task);
 
-        taskInput.addEventListener("keypress", function(event){
-            if(event.key === "Enter") {
-                event.preventDefault();
-            }
-        });
 
         // add new html element in ul, li and span
         const listItem = document.createElement("li");
