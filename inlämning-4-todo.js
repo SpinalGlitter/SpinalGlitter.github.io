@@ -81,7 +81,7 @@ addBtn.addEventListener(
             
         });
        
-        // Clearing iputfield
+        // Clearing inputfield
         taskInput.value = "";
 
     }
