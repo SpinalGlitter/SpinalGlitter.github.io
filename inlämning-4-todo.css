@@ -1,20 +1,67 @@
 html {
-    height: 100vh;
-    min-width: auto;
-    padding: 100px;
-    background-image: linear-gradient(100deg, white, green);
+    background-color: rgb(195, 110, 110); 
 }
 
-body {   
+body {
+    display: block;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 20px;
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flyIn 0.5s ease-out forwards;
 }
 
-.noInput {
+/* Keyframe for flying in */
+@keyframes flyIn {
+    0% {
+        top: -300px; /* Start from above the screen */
+    }
+
+    75% {
+        top: 40px;
+    }
+
+    100% {
+        top: 10px; /* Final position on the screen */
+    }
+}    
+
+h1 {
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+
+body > p {
+    margin-top: 8px;
+
+}
+
+#taskInput {
+    font-size: large;  
+}
+
+#addBtn {
+    font-size: large;
+}
+
+.noInput {    
     font-size: small;
     color: red;
+    animation: blinker 0.5s linear infinite;
 }
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
 
 .list {  
 
@@ -26,11 +73,14 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .completed {
     color: grey;
     text-decoration: line-through;
+    transition: 1s;
+    cursor: pointer;
  }
 
  .trashcan {
@@ -38,6 +88,7 @@ ul {
     font-style: initial;
     color: black;
     background: none;
+    cursor: pointer;
  }
 
 
