@@ -1,12 +1,13 @@
 html {
-    background-color: rgb(195, 110, 110); 
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #f5cbcb, #f87d7d);
 }
 
 body {
     display: block;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
     background-color: white;
     width: 400px;
     margin: auto;
@@ -15,25 +16,39 @@ body {
     top: -300px;
     margin-left: 50%;
     transform: translateX(-50%);
-    animation: flyIn 0.5s ease-out forwards;
+    animation: flyInDiv 1s ease-out forwards;
 }
 
 /* Keyframe for flying in */
-@keyframes flyIn {
+@keyframes flyInDiv {
     0% {
         top: -300px; /* Start from above the screen */
+        opacity: 0;
     }
 
-    75% {
-        top: 40px; /*Bouncing*/
+    25% {
+        top: 20px; /*Bouncing*/
+        opacity: 0.25;
+    }
+
+    50% {
+        top: 40px;
+        opacity: 0.5;
+    }
+
+    80% {
+        top: 55px;
+        opacity: 0.75;
     }
 
     100% {
         top: 10px; /* Final position on the screen */
+        opacity: 1;
     }
 }    
 
 h1 {
+    font-family: 'Times New Roman', Times, serif;
     padding-top: 10px;
     margin-bottom: 0px;
 }
@@ -42,33 +57,41 @@ body > p {
     margin-top: 8px;
 
 }
-
-#taskInput {
+input{
     font-size: large;
+    border-color: grey;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: blue;
 }
 
 #addBtn {
     font-size: large;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .noInput {    
     font-size: small;
     color: red;
-    animation: blinker 0.8s linear infinite;
-    
+    animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
     50% {
         opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
 }
 
 
-.list {  
-
-    font-size: larger;
+.list { 
+    font-size: large;
 }
 
 ul {
@@ -80,6 +103,9 @@ ul {
 }
 
 li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
     transform: translateY(-100px);
     animation: flydown 0.3s ease-out forwards;
 }
@@ -100,14 +126,14 @@ li {
 .completed {
     color: grey;
     text-decoration: line-through;
-    transition: 1s;
+    transition: 0.7s;
     cursor: pointer;
  }
 
  .trashcan {
-    font-size: x-large;
-    font-style: initial;
+    font-size: large;
     color: black;
+    margin-left: 5px;
     background: none;
     cursor: pointer;
  }
