@@ -4,6 +4,7 @@ html {
 
 body {
     display: block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
@@ -12,7 +13,7 @@ body {
     padding-bottom: 20px;
     position: absolute;
     top: -300px;
-    left: 50%;
+    margin-left: 50%;
     transform: translateX(-50%);
     animation: flyIn 0.5s ease-out forwards;
 }
@@ -24,7 +25,7 @@ body {
     }
 
     75% {
-        top: 40px;
+        top: 40px; /*Bouncing*/
     }
 
     100% {
@@ -43,17 +44,19 @@ body > p {
 }
 
 #taskInput {
-    font-size: large;  
+    font-size: large;
 }
 
 #addBtn {
     font-size: large;
+    cursor: pointer;
 }
 
 .noInput {    
     font-size: small;
     color: red;
-    animation: blinker 0.5s linear infinite;
+    animation: blinker 0.8s linear infinite;
+    
 }
 
 @keyframes blinker {
@@ -74,6 +77,24 @@ ul {
     margin: 0;
     padding: 0;
     cursor: pointer;
+}
+
+li {
+    transform: translateY(-100px);
+    animation: flydown 0.3s ease-out forwards;
+}
+
+@keyframes flydown {
+    0% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(15px);
+    }
+    100%{
+        
+        transform: translateY(0px);
+    }
 }
 
 .completed {
