@@ -16,7 +16,7 @@ addBtn.addEventListener(
         
         // condition: ceck input not empty (if-sats)
         if (text.length === 0){
-            noInput.innerHTML = "You have to write something!"
+            noInput.innerHTML = "Input must not be empty"
             return;
         };
 

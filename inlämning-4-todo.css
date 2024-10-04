@@ -9,7 +9,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
     background-color: white;
-    width: 400px;
+    width: 500px;
     margin: auto;
     padding-bottom: 20px;
     position: absolute;
@@ -48,8 +48,10 @@ body {
 }    
 
 h1 {
+    font-size: 2.5rem;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -58,25 +60,28 @@ body > p {
 
 }
 input{
-    font-size: large;
-    border-color: grey;
+    font-size: 1.25rem;
+    border-color: rgb(224, 224, 224);
     border-radius: 4px;
-    outline: none;
+    outline: blue;
 }
 
 input:focus {
-    border-color: blue;
+    border-color: rgb(73, 73, 228);
 }
 
 #addBtn {
-    font-size: large;
+    font-size: 1.25rem;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .noInput {    
-    font-size: small;
     color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: small;
+    font-weight: bold;
     animation: blinker 1s linear infinite;
 }
 
@@ -91,7 +96,7 @@ input:focus {
 
 
 .list { 
-    font-size: large;
+    font-size: 1.5rem;
 }
 
 ul {
@@ -106,6 +111,7 @@ li {
     margin-top: 5px;
     margin-bottom: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
     transform: translateY(-100px);
     animation: flydown 0.3s ease-out forwards;
 }
@@ -118,7 +124,6 @@ li {
         transform: translateY(15px);
     }
     100%{
-        
         transform: translateY(0px);
     }
 }
@@ -131,7 +136,7 @@ li {
  }
 
  .trashcan {
-    font-size: large;
+    font-size: 1.5rem;
     color: black;
     margin-left: 5px;
     background: none;
