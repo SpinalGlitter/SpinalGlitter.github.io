@@ -37,7 +37,7 @@ body {
     }
 
     75% {
-        top: 55px;
+        top: 50px;
         opacity: 0.75;
     }
 
@@ -63,17 +63,22 @@ input{
     font-size: 1.25rem;
     border-color: rgb(224, 224, 224);
     border-radius: 4px;
-    outline: blue;
+    border-style: solid;
+    outline: none;
 }
 
 input:focus {
-    border-color: rgb(73, 73, 228);
+    border-color: rgb(33, 125, 211);
+    font-weight: solid;
 }
 
 #addBtn {
     font-size: 1.25rem;
     border-radius: 4px;
-    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: lightgray;
 }
 
 .noInput {    
@@ -82,7 +87,7 @@ input:focus {
     font-style: italic;
     font-size: small;
     font-weight: bold;
-    animation: blinker 1s linear infinite;
+    animation: blinker 0.8s linear infinite;
 }
 
 @keyframes blinker {
@@ -118,12 +123,15 @@ li {
 @keyframes flydown {
     0% {
         transform: translateY(-100px);
+        opacity: 0.25;
     }
     75% {
         transform: translateY(15px);
+        opacity: 0.50;
     }
     100%{
         transform: translateY(0px);
+        opacity: 1;
     }
 }
 
@@ -134,12 +142,15 @@ li {
     cursor: pointer;
  }
 
- .trashcan {
-    font-size: 1.5rem;
-    color: black;
-    margin-left: 5px;
-    background: none;
-    cursor: pointer;
+ li:hover {
+    text-decoration: line-through;
  }
 
-
+ .trashcan {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 8px;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+ }

@@ -36,6 +36,7 @@ addBtn.addEventListener(
 
         const itemLabel = document.createElement("span");
         itemLabel.innerText = text;
+        itemLabel.setAttribute("class", "task")
         listItem.appendChild(itemLabel);
 
         const trashcan = document.createElement("span")
