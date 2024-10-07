@@ -23,17 +23,14 @@ body {
     0% {
         top: -300px; /* Start from above the screen */
     }
-
     25% {
         top: 20px; /*Bouncing*/
     }
-
     50% {
         top: 40px; 
     }
-
     75% {
-        top: 50px;       
+        top: 70px;       
     }
     100% {
         top: 10px; /* Final position on the screen */     
@@ -66,8 +63,8 @@ h1 {
 
 body > p {
     margin-top: 8px;
-
 }
+
 input{
     font-size: 1.25rem;
     border-color: rgb(165, 163, 163);
@@ -103,7 +100,6 @@ input{
         opacity: 1;
     }
 }
-
 
 .list { 
     font-size: 1.5rem;
