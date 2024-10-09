@@ -83,13 +83,13 @@ input{
     background-color: lightgray;
 }
 
-.noInput {    
+.blink {    
     color: red;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-size: small;
     font-weight: bold;
-    animation: blinker 0.8s linear infinite;
+    animation: blinker 0.5s linear 3;
 }
 
 @keyframes blinker {

@@ -12,15 +12,22 @@ let completedCount = 0;
 addBtn.addEventListener(
     "click", function() {
         //get value from input
-        const text = taskInput.value; 
+        const text = taskInput.value.trim();
+
+        console.log("Task input value:", text);
         
         // condition: ceck input not empty (if-sats)
         if (text.length === 0){
-            noInput.innerHTML = "Input must not be empty"
+            noInput.innerHTML = "Input must not be empty";
+            noInput.classList.add("blink"); //add blink class to p-element
             return;
-        };
+        }
+        else {
+            noInput.innerHTML = "";
+            noInput.classList.remove("blink"); //remove blink class from p-element if input is not empty
+        }
 
-        noInput.innerHTML = "";
+        
         
         //pushing input to array and the task is not completed
         const task = {
