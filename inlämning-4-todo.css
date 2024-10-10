@@ -37,13 +37,13 @@ body {
     }
 }    
 
-.fade-in-text {
+.fadeInText {
     opacity: 0;
-    animation: fadeInText 1s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards;
     animation-delay: 1s; 
 }
 
-@keyframes fadeInText {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
