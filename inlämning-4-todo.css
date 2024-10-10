@@ -141,17 +141,17 @@ li {
     text-decoration: line-through;
     transition: 0.5s;
     cursor: pointer;
- }
+}
 
- li:hover {
+li:hover {
     text-decoration: line-through;
- }
+}
 
- .trashcan {
+.trashcan {
     display: inline-block;
     font-size: 1.5rem;
     margin-left: 8px;
     background: none;
     cursor: pointer;
     text-decoration: none;
- }
+}
